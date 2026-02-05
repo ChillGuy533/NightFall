@@ -1,0 +1,211 @@
+/*Reset some default styles*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+body{
+    background-color: #0b0b0b;
+    color: #fff;
+    line-height: 1.6;
+}
+.container{
+    width: 80%;
+    margin: 0 auto;
+}
+/*Header*/
+header{
+    background-color: #111;
+    padding: 20px 0;
+}
+header.container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header .logo{
+    font-size: 2rem;
+    font-weight: bold;
+    color: #e50914;
+}
+header nav ul{
+    list-style: none;
+    display: flex;
+}
+header nav ul li{
+    margin-left: 20px;
+}
+header nav ul li a{
+    color:#fff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+header nav ul li a:hover {
+    color: #e50914;
+}
+/*Hero Section*/
+.hero{
+    background:url('./images/NightFall.jpg') 
+    no-repeat center center/cover;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+}
+/* Dark overlay for better text visisbility */
+.hero::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.6);
+}
+.hero-content {
+    position: relative;
+    z-index: 1;
+    color: #fff;
+}
+.hero h2{
+    font-size: 3rem;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 10px #000;
+}
+.hero p{
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    text-shadow: 1px 1px 5px #000;
+}
+.btn{
+    display: inline-block;
+    background-color: #e50914;
+    color: #fff;
+    padding: 12px 30px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background 0.3s; transform: 0.3s;
+}
+.btn:hover{
+    background-color: #ff1c30;
+    transform: scale(1.05);
+}
+/* Sections */
+.synopsis, .trailer {
+    padding: 60px 0;
+    background-color: #111;
+    text-align: center;
+}
+/*Cast and Synopsis*/
+.cast{
+    padding: 60px 0;
+}
+
+.synopsis h2
+.trailer h2{
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #e50914;
+}
+.cast h2{
+    font-size: 2rem;
+    margin-bottom: 30px;
+    color: #e50914;
+}
+.cast-list {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.cast-member {
+    background-color: #1c1c1c;
+    padding: 20px;
+    width: 250px;
+    margin: 10px;
+    border-radius: 10px;
+    text-align: center;
+    transition: transform 0.3s; box-shadow:0.3s;
+}
+.cast-member:hover{
+    transform: scale(1.05);
+    box-shadow: 0 0 15px #e50914;
+}
+.cast-member h3{
+    margin-bottom: 10px;
+    color:#fff;
+}
+.cast-member p{
+    color: #bbb;
+}
+
+/*Footer*/
+footer{
+    background-color: #111;
+    padding: 20px 0;
+    text-align: center;
+    color: #777;
+}
+/*MOBILE SIZE STYLES (PHONES & SMALL DEVICES) */
+
+@media (max-width: 768px) {
+
+    /* Make container wider for small screens */
+    .container {
+        width: 90%;
+    }
+    /* Stack header items vertically */
+    header.container {
+        flex-direction: column;
+        text-align: center;
+    }
+    header nav ul {
+        flex-direction: column;
+        margin-top: 15px;
+    }
+    header nav ul li {
+        margin: 10px 0;
+    }
+    /* Reduce hero height and text size */
+    .hero {
+        height: 60vh;
+        padding: 20px;
+    }
+    .hero h2{
+        font-size: 2rem;
+    }
+    .hero p{
+        font-size: 1rem;
+    }
+    /*Cast cards full width*/
+    .cast-member {
+        width: 100%;
+    }
+}
+
+/* Desktop / LARGE SCREEN STYLES */
+
+@media (min-width: 1024px) {
+    /* Wider container on large screens */
+    .container{
+        width: 70%;
+    }
+    /* Bigger hero text for cinematic feel */
+    .hero h2{
+        font-size: 3.5rem;
+    }
+    .hero p{
+        font-size: 1.3rem;
+    }
+    /* Cast cards nicely spaced */
+    .cast-member {
+        width: 280px;
+    }
+ }
+ .hero {
+    background-attachment: fixed;
+}
